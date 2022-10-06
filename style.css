@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+} 
+
+body{
+    background-color: var(--Cream);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 0.1px);
+    margin: 0 1rem;
+}
+img{
+    max-width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+h1{
+    color: var(--dark_blue);
+    margin-top: 10px;
+    font-size: 2rem;
+}
+h1,.price{
+    font-family: 'Fraunces', serif;
+}
+h2{
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+p,h2{
+    font-size: 14px;
+    color: var(--Dark_grayish-blue);
+}
+
+p{
+    margin-top: 10px;
+}
+
+.container{
+    max-width: 600px;
+}
+
+.container .info{
+    background-color: var(--White);
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1.5rem;
+    margin-top: -0.5rem;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    margin-top: 10px; 
+    align-items: center;
+}
+
+
+.price{
+    color: var(--Dark-cyan);
+    font-size: 2rem;  
+}
+
+ul li:last-child{
+    font-size: 12px;
+    color: var(--Dark_grayish-blue);
+    margin-left: 1rem;
+}
+
+
+button{
+    width: 100%;
+    background-color: var(--Dark-cyan);
+    color:var(--White);
+    padding: 1rem;
+    border-style: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: 0.2s all ease-in;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button img{
+    margin-right: 10px;
+}
+button:hover{
+    background-color: hsl(158, 31%, 14%);
+}
+
+.attribution { font-size: 11px; text-align: center; margin-top: 2rem; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(min-width:760px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .img img{
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+    .container .info{
+        border-radius: 0 0.5rem 0.5rem 0;
+        margin-top: 0;
+        margin-bottom: 4px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    h1,p,ul,button{
+        margin-top: 1.5rem;
+    }
+    h1{
+        line-height: 32px;
+    }
+    p{
+        line-height: 23px;
+    }
+}
